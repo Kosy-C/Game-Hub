@@ -6,7 +6,7 @@ import getCroppedImageUrl from '../services/image-url';
 
 interface Props {
     game: Game;
-    name: string;
+    name?: string;
 }
 const GameCard = ({ game }: Props) => {
   return (
