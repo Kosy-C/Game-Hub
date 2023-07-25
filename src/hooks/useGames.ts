@@ -7,18 +7,17 @@ export interface Platform {
   name: string;
   slug: string;
 }
+
 export interface Game {
   id: number;
   name: string;
   background_image: string;
-  parent_platorms: { platform: Platform }[];
+  parent_platforms: { platform: Platform }[];
   metacritic: number;
   rating_top: number;
 }
 
-const useGames = (
-  gameQuery: GameQuery
-) =>
+const useGames = (gameQuery: GameQuery) =>
   useData<Game>(
     "/games",
     {
